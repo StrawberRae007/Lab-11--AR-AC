@@ -1,4 +1,5 @@
 import math
+
 def add(a,b): a+b
 
 def sub(a,b): a-b
@@ -18,8 +19,6 @@ def log(a,b):
 def exp(a,b):
     return a**b
 
-def add(a,b):
-    return a+b
 def subtract(a,b):
     return a-b
 def multiply(a,b):
