@@ -7,7 +7,7 @@ def multiply(a,b):
     return a*b
 def divide(a,b):
     if a==0:
-        raise ZeroDivisionError("a is 0, can't divide by zero.")
+        raise ZeroDivisionError("There is an error because a is 0 and we can't divide by zero.")
     return b/a
 def logarithm(a,b):
     if a<=0 or a==1:
