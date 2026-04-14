@@ -32,7 +32,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(square_root(25),5)
         self.assertAlmostEqual(square_root(108),10.4)
 
-        def test_add(self):
+    def test_add(self):
         self.assertEqual(add(1,2),3)
         self.assertEqual(add(2,3),5)
         self.assertEqual(add(-3,4),1)
@@ -46,7 +46,7 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ZeroDivisionError):
             div(0,10)
 
-   def test_logarithm(self):
+    def test_logarithm(self):
        self.assertEqual(logarithm(100,10),2)
        self.assertEqual(logarithm(math.e,math.e),1)
        self.assertEqual(logarithm(8,2),3)
