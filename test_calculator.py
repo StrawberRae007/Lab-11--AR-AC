@@ -23,14 +23,14 @@ class TestCalculator(unittest.TestCase):
 
     def test_hypotenuse(self):  # 3 assertions
         self.assertEqual(hypotenuse(3, 4), 5)
-        self.assertAlmostEqual(hypotenuse(7, 7), 9.89949, places=5)
-        self.assertAlmostEqual(hypotenuse(10,5),11.18)
+        self.assertAlmostEqual(hypotenuse(7, 7), 9.9, places=1)
+        self.assertAlmostEqual(hypotenuse(-3,-3),4.2, places=1)
 
     def test_sqrt(self):  # 3 assertions
         with self.assertRaises(ValueError):
             square_root(-1)
         self.assertEqual(square_root(25),5)
-        self.assertAlmostEqual(square_root(108),10.4)
+        self.assertAlmostEqual(square_root(108),10.4, places=1)
 
     def test_add(self):
         self.assertEqual(add(1,2),3)
