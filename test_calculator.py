@@ -1,56 +1,37 @@
+#https://github.com/StrawberRae007/Lab-11--AR-AC
+#Partner 1: Audrey Reid
+#Partner 2: Andrea Mae Cecillano
+
 import unittest
 from calculator import *
 
 class TestCalculator(unittest.TestCase):
-    ######### Partner 2
-    # def test_add(self): # 3 assertions
-    #     fill in code
 
-    # def test_subtract(self): # 3 assertions
-    #     fill in code
-    # ##########################
+    def test_multiply(self):  # 3 assertions
+        self.assertEqual(mul(3, 2), 6)
+        self.assertEqual(mul(-1000, 399), -399000)
+        self.assertEqual(mul(4579209, 0), 0)
 
-    ######## Partner 1
-    # def test_multiply(self): # 3 assertions
-    #     fill in code
+    def test_divide(self):  # 3 assertions
+        with self.assertRaises(ZeroDivisionError):
+            div(0, 34)
+        self.assertEqual(div(50, 0), 0)
+        self.assertEqual(div(-1, -1), 1)
 
-    # def test_divide(self): # 3 assertions
-    #     fill in code
-    # ##########################
+    def test_log_invalid_argument(self):  # 1 assertion
+        with self.assertRaises(ValueError):
+            logarithm(-5,10)
 
-    ######## Partner 2
-    # def test_divide_by_zero(self): # 1 assertion
-    #     # call division function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     div(0, 5)
-    #     fill in code
+    def test_hypotenuse(self):  # 3 assertions
+        self.assertEqual(hypotenuse(3, 4), 5)
+        self.assertAlmostEqual(hypotenuse(7, 7), 9.89949, places=5)
+        self.assertAlmostEqual(hypotenuse(10,5),11.18)
 
-    # def test_logarithm(self): # 3 assertions
-    #     fill in code
+    def test_sqrt(self):  # 3 assertions
+        with self.assertRaises(ValueError):
+            square_root(-1)
+        self.assertEqual(square_root(25),5)
+        self.assertAlmostEqual(square_root(108),10.4)
 
-    # def test_log_invalid_base(self): # 1 assertion
-    #     # use same technique from test_divide_by_zero
-    #     fill in code
-    # ##########################
-    
-    ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
-    #     # call log function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     logarithm(0, 5)
-    #     fill in code
-
-    # def test_hypotenuse(self): # 3 assertions
-    #     fill in code
-
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
-    ##########################
-
-# Do not touch this
 if __name__ == "__main__":
     unittest.main()
