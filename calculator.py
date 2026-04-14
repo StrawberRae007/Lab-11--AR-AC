@@ -1,3 +1,7 @@
+#https://github.com/StrawberRae007/Lab-11--AR-AC
+#Partner 1: Audrey Reid
+#Partner 2: Andrea Mae Cecillano
+
 import math
 
 def square_root(a):
