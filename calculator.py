@@ -1,5 +1,5 @@
 import math
-<<<<<<< HEAD
+
 def square_root(a):
     try:
         if a<0:
@@ -14,9 +14,7 @@ def hypotenuse(a,b):
     except Exception as e:
         print(f"An error occured: {e}")
         raise
-=======
 
->>>>>>> 781c02e633d5d27b4963eec80c15101eff3f4485
 def add(a,b):
     return a+b
 
