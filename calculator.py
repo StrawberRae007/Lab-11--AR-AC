@@ -1,4 +1,5 @@
 import math
+<<<<<<< HEAD
 def square_root(a):
     try:
         if a<0:
@@ -6,28 +7,36 @@ def square_root(a):
         return math.sqrt(a)
     except ValueError:
         raise ValueError("Cannot take square root of a negative number.")
+
 def hypotenuse(a,b):
     try:
         return math.hypot(a,b)
     except Exception as e:
         print(f"An error occured: {e}")
         raise
+=======
+
+>>>>>>> 781c02e633d5d27b4963eec80c15101eff3f4485
 def add(a,b):
     return a+b
+
 def subtract(a,b):
     return a-b
-def multiply(a,b):
-    return a*b
-def divide(a,b):
-    if a==0:
-        raise ZeroDivisionError("There is an error because a is 0 and we can't divide by zero.")
-    return b/a
+
 def logarithm(a,b):
     if a<=0 or a==1:
         raise ValueError("The logarithm base of a cannot be negative, 0, or 1.")
     if b<=0:
         raise ValueError("The logarithm value of b must be greater than 0.")
     return math.log(b,a)
-def exponent(a,b):
-    return a**b
 
+def mul(a,b):
+    return a*b
+
+def div(a,b):
+    if a==0:
+        raise ZeroDivisionError('division by zero')
+    return a/b
+
+def exp(a,b):
+    return a**b
