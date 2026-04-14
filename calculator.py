@@ -1,4 +1,17 @@
 import math
+def square_root(a):
+    try:
+        if a<0:
+            raise ValueError
+        return math.sqrt(a)
+    except ValueError:
+        raise ValueError("Cannot take square root of a negative number.")
+def hypotenuse(a,b):
+    try:
+        return math.hypot(a,b)
+    except Exception as e:
+        print(f"An error occured: {e}")
+        raise
 def add(a,b):
     return a+b
 def subtract(a,b):
